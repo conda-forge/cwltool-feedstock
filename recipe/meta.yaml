@@ -10,6 +10,7 @@ source:
   sha256: 453e252525005b4c22dc654c0379227d516bf9364cce46184b580684cb50ad40
 
 build:
+  noarch: python
   number: 0
   entry_points:
     - cwltool=cwltool.main:run
