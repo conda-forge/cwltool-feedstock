@@ -11,6 +11,8 @@ source:
 
 build:
   number: 1
+  # Python 3.7 builds not working now due to missing dependencies
+  skip: true  # [py37]
   entry_points:
     - cwltool=cwltool.main:run
   # Avoids specific version pinning in cwltool so we don't need specific
