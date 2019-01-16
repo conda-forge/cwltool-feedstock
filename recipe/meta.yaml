@@ -10,10 +10,12 @@ source:
   sha256: 453e252525005b4c22dc654c0379227d516bf9364cce46184b580684cb50ad40
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - cwltool=cwltool.main:run
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
+  # Avoids specific version pinning in cwltool so we don't need specific
+  # conda pins and avoid pkg resource errors
+  script: "sed -i.bak 's/ == / >= /' setup.py && {{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv "
 
 requirements:
   host:
