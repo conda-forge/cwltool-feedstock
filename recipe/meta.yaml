@@ -28,7 +28,7 @@ requirements:
   run:
     - bagit >=1.6.4
     - mypy_extensions
-    - prov ==1.5.1
+    - prov >=1.5.1
     - psutil
     - python
     - rdflib >=4.2.2
