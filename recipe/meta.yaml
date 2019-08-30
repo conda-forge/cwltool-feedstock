@@ -23,6 +23,7 @@ requirements:
 
   run:
     - bagit >=1.6.4
+    - coloredlogs
     - mypy_extensions
     - prov ==1.5.1
     - psutil
