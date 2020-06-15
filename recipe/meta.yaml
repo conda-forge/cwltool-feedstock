@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k or win]
   entry_points:
     - cwltool=cwltool.main:run
@@ -49,6 +49,7 @@ requirements:
     - bagit >=1.6.4
     - typing_extensions
     - coloredlogs
+    - galaxy-tool-util  # [ not (aarch64 or arm64)]
     - pydot >=1.4.1
     - argcomplete
     - cachecontrol
