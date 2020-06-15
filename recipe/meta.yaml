@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - cwltool=cwltool.main:run
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
@@ -35,12 +35,15 @@ requirements:
     - bagit >=1.6.4
     - typing_extensions
     - coloredlogs
+    - galaxy-tool-util
+    # these commented out because they don't seem to be needed any more
     # - scandir
     # - six >=1.9.0
     # - pathlib2 >=2.3.2
     - typing >=3.5.3  # [py<35]
 
 test:
+  # these waiting to be enabled when arcp is available in conda
   # requires:
   #   - pytest <6
   #   - mock >=2.0.0
