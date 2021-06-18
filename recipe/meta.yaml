@@ -41,18 +41,19 @@ requirements:
     - argcomplete
 
 test:
-  # requires:
-  #   - pytest <6
-  #   - mock >=2.0.0
-  #   - pytest-mock >=1.10.0
-  #   - arcp >=0.2.0
-  #   - rdflib-jsonld >=0.4.0
+  requires:
+    - pytest <6
+    - mock >=2.0.0
+    - pytest-mock >=1.10.0
+    - arcp >=0.2.0
+    - rdflib-jsonld >=0.4.0
+    - nodejs
   imports:
     - cwltool
     - cwltool.tests
   commands:
     - cwltool --help
-    # - python -m pytest --pyargs cwltool
+    - python -m pytest --pyargs cwltool -k 'not test_v1_0_position_expression and not TestMpiRun and not test_malformed_reqs and not test_whoami and not test_udocker_should_display_memory_usage'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
