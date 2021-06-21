@@ -175,6 +175,6 @@ Feedstock Maintainers
 
 * [@chapmanb](https://github.com/chapmanb/)
 * [@croth1](https://github.com/croth1/)
-* [@pvanheus](https://github.com/pvanheus/)
 * [@mr-c](https://github.com/mr-c/)
+* [@pvanheus](https://github.com/pvanheus/)
 
