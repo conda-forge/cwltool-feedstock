@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.0.20210319143721" %}
-{% set sha256 = "59fb31440749882fe04f874c519f749d8aab71065defab9c8709b11e7d7d619f" %}
+{% set version = "3.1.20210616134059" %}
+{% set sha256 = "076c4a6d8180625c61c7744e5bd18dbf7b7faac7dc04d6e3ff0bac43bbcc85af" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -10,8 +10,8 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  skip: true  # [py2k]
+  number: 1
+  skip: true  # [py2k or win or py==39]
   entry_points:
     - cwltool=cwltool.main:run
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
@@ -41,18 +41,19 @@ requirements:
     - argcomplete
 
 test:
-  # requires:
-  #   - pytest <6
-  #   - mock >=2.0.0
-  #   - pytest-mock >=1.10.0
-  #   - arcp >=0.2.0
-  #   - rdflib-jsonld >=0.4.0
+  requires:
+    - pytest
+    - mock >=2.0.0
+    - pytest-mock >=1.10.0
+    - arcp >=0.2.0
+    - rdflib-jsonld >=0.4.0
+    - nodejs
   imports:
     - cwltool
     - cwltool.tests
   commands:
     - cwltool --help
-    # - python -m pytest --pyargs cwltool
+    - python -m pytest --pyargs cwltool -k 'not test_v1_0_position_expression and not TestMpiRun and not test_malformed_reqs and not test_whoami and not test_udocker_should_display_memory_usage'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
