@@ -48,6 +48,7 @@ test:
     - arcp >=0.2.0
     - rdflib-jsonld >=0.4.0
     - nodejs
+    - jq
   imports:
     - cwltool
     - cwltool.tests
