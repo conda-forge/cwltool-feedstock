@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20210922130607" %}
-{% set sha256 = "d2f3ffc4751c92939a8a6b6b017940e8563257416f2b4abf37468e569acd082f" %}
+{% set version = "3.1.20210922203925" %}
+{% set sha256 = "c43b37a240ae2ea53a6dadd73607c9109bf961b0d6aa4cdb04d48a807703d1fc" %}
 package:
   name: cwltool
   version: {{ version }}
