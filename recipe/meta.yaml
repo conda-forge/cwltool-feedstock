@@ -26,23 +26,23 @@ requirements:
     - python
     - setuptools
     - requests >=2.6.1
-    - ruamel.yaml >=0.12.4,<=0.16.5
-    - rdflib >=4.2.2,<4.3.0
-    - shellescape >=3.4.1,<3.5
-    - schema-salad >=8.1.20210627200047,<9
+    - ruamel.yaml >=0.15,<0.17.17
+    - rdflib >=4.2.2,<6.1.0
+    - shellescape >=3.4.1,<3.9
+    - schema-salad >=8.2.20210914115719,<9
     - mypy_extensions
-    - psutil
+    - psutil >=5.6.6
     - prov ==1.5.1
     - bagit >=1.6.4
     - typing_extensions
     - coloredlogs
     - pydot >=1.4.1
-    - typing >=3.5.3  # [py<35]
     - argcomplete
 
 test:
   requires:
-    - pytest
+    - pytest >=6.2,<6.3
+    - pytest-xdist
     - mock >=2.0.0
     - pytest-mock >=1.10.0
     - arcp >=0.2.0
@@ -54,7 +54,7 @@ test:
     - cwltool.tests
   commands:
     - cwltool --help
-    - python -m pytest --pyargs cwltool -k 'not test_v1_0_position_expression and not TestMpiRun and not test_malformed_reqs and not test_whoami and not test_udocker_should_display_memory_usage'
+    - python -m pytest -n auto --pyargs cwltool -k 'not (test_whoami or test_udocker_should_display_memory_usage or TestMpiRun)'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
