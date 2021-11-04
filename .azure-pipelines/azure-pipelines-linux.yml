@@ -8,28 +8,16 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_nodejs12python3.7.____cpython:
-        CONFIG: linux_64_nodejs12python3.7.____cpython
+      linux_64_nodejs12:
+        CONFIG: linux_64_nodejs12
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_nodejs12python3.8.____cpython:
-        CONFIG: linux_64_nodejs12python3.8.____cpython
+      linux_64_nodejs14:
+        CONFIG: linux_64_nodejs14
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_nodejs14python3.7.____cpython:
-        CONFIG: linux_64_nodejs14python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_nodejs14python3.8.____cpython:
-        CONFIG: linux_64_nodejs14python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_nodejs16python3.7.____cpython:
-        CONFIG: linux_64_nodejs16python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
-      linux_64_nodejs16python3.8.____cpython:
-        CONFIG: linux_64_nodejs16python3.8.____cpython
+      linux_64_nodejs16:
+        CONFIG: linux_64_nodejs16
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-comp7
   timeoutInMinutes: 360
