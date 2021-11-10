@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20211104071347" %}
-{% set sha256 = "0fb225701e4fe01c0e1b5eb44f37e288f1275972d5c7908f4dbbb609794b79e8" %}
+{% set version = "3.1.20211107152837" %}
+{% set sha256 = "ae1cd4626b5330457b1a62bcb2580f36f530264a80222f2cc17cf65899ebf04e" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - cwltool=cwltool.main:run
   script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vvv '
