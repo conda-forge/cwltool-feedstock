@@ -50,6 +50,7 @@ test:
     - arcp >=0.2.0
     - nodejs
     - jq
+    - cwl-utils >=0.19
   imports:
     - cwltool
     - cwltool.tests
