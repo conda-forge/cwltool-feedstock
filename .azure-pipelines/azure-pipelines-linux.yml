@@ -12,10 +12,6 @@ jobs:
         CONFIG: linux_64_nodejs14python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs14python3.7.____cpython:
-        CONFIG: linux_64_nodejs14python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_nodejs14python3.8.____cpython:
         CONFIG: linux_64_nodejs14python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -28,10 +24,6 @@ jobs:
         CONFIG: linux_64_nodejs16python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16python3.7.____cpython:
-        CONFIG: linux_64_nodejs16python3.7.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_nodejs16python3.8.____cpython:
         CONFIG: linux_64_nodejs16python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,20 +32,16 @@ jobs:
         CONFIG: linux_64_nodejs16python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs17python3.10.____cpython:
-        CONFIG: linux_64_nodejs17python3.10.____cpython
+      linux_64_nodejs18python3.10.____cpython:
+        CONFIG: linux_64_nodejs18python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs17python3.7.____cpython:
-        CONFIG: linux_64_nodejs17python3.7.____cpython
+      linux_64_nodejs18python3.8.____cpython:
+        CONFIG: linux_64_nodejs18python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs17python3.8.____cpython:
-        CONFIG: linux_64_nodejs17python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs17python3.9.____cpython:
-        CONFIG: linux_64_nodejs17python3.9.____cpython
+      linux_64_nodejs18python3.9.____cpython:
+        CONFIG: linux_64_nodejs18python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
