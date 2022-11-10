@@ -69,7 +69,7 @@ test:
     - cwltool.tests
   commands:
     - cwltool --help
-    - python -m pytest -n 2 --pyargs cwltool -k 'not (test_whoami or test_udocker_should_display_memory_usage or test_udocker_usage_should_not_write_cid_file or TestMpiRun)'
+    - python -m pytest -n 2 --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun)'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
