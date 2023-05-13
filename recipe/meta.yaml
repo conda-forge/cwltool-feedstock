@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20230425144158" %}
-{% set sha256 = "b6307c536ec94a94cb9215a26057ea792b907144ca57b015699cb180ca309086" %}
+{% set version = "3.1.20230513155734" %}
+{% set sha256 = "e358a95783498b42f2d1ae93fef625e507f9f43a0eacee4e93f9e27d676cb666" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -24,7 +24,7 @@ requirements:
   host:
     - python
     - pip
-    - mypy >=0.910 # setup.py needs this when CWLTOOL_USE_MYPYC=1
+    - mypy ==1.3.0 # setup.py needs this when CWLTOOL_USE_MYPYC=1
     - types-requests
     - types-setuptools
     - types-psutil
@@ -57,7 +57,7 @@ requirements:
 
 test:
   requires:
-    - pytest >=6.2,<7.3
+    - pytest >=6.2,<7.4
     - pytest-xdist
     - pytest-httpserver
     - mock >=2.0.0
@@ -70,8 +70,7 @@ test:
     - cwltool.tests
   commands:
     - cwltool --help
-    - python -m pytest -n 2 --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun)'  # [ not (aarch64 or arm64)]
-    - python -m pytest -n 2 --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun or test_biocontainers or test_bioconda or test_modules)'  # [ aarch64 or arm64]
+    - python -m pytest -n 2 -v --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun or test_windows_warning or test_biocontainers or test_bioconda or test_modules)'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
