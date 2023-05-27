@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20230513155734" %}
-{% set sha256 = "e358a95783498b42f2d1ae93fef625e507f9f43a0eacee4e93f9e27d676cb666" %}
+{% set version = "3.1.20230527103121" %}
+{% set sha256 = "149d997734fff38c29530494fd5e1139b9b0c8ad62280e3e9da41a0c7a305d30" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -32,6 +32,8 @@ requirements:
     - setuptools
     - schema-salad >=8.4,<9
     - cwl-utils >=0.22
+    - importlib_resources >=1.4
+    - importlib_metadata  # [py<38]
     - ruamel.yaml >=0.17.6,<0.18
       # ruamel.yaml is needed for the type hints
       # the newer version: 0.15.99 has py.typed, which mypyc needs
@@ -43,11 +45,12 @@ requirements:
     - rdflib >=4.2.2,<6.4.0
     - shellescape >=3.4.1,<3.9
     - schema-salad >=8.4,<9
+    - prov ==1.5.1
     - mypy_extensions
     - psutil >=5.6.6
-    - prov ==1.5.1
-    - bagit >=1.6.4
     - typing_extensions
+    - importlib_resources >=1.4
+    - importlib_metadata  # [py<38]
     - coloredlogs
     - galaxy-tool-util >=22.1.2,<23
     - pydot >=1.4.1
@@ -57,12 +60,13 @@ requirements:
 
 test:
   requires:
+    - bagit >=1.6.4,<1.9
     - pytest >=6.2,<7.4
-    - pytest-xdist
-    - pytest-httpserver
     - mock >=2.0.0
     - pytest-mock >=1.10.0
+    - pytest-httpserver
     - arcp >=0.2.0
+    - pytest-xdist
     - nodejs
     - jq
   imports:
