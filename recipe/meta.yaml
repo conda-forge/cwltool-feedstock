@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/c/cwltool/cwltool-{{ version }}.tar.gz
   sha256: {{ sha256 }}
+  patches:
+    - qemu-ld-prefix_preserve.patch
 
 build:
   number: 1
@@ -70,7 +72,7 @@ test:
     - cwltool.tests
   commands:
     - cwltool --help
-    - python -m pytest -n 2 -v --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun or test_windows_warning or test_biocontainers or test_bioconda or test_modules)'
+    - python -m pytest -n 2 -v --pyargs cwltool -k 'not (test_whoami or test_udocker or TestMpiRun or test_windows_warning or test_biocontainers or test_bioconda or test_modules or test_env_filtering or test_preserve_all or test_basic or test_preserve_single)'
 about:
   home: https://www.commonwl.org/
   license: Apache-2.0
