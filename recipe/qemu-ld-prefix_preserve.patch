@@ -1,0 +1,25 @@
+commit c099e87eeb5b07a808e47d138276cacf713ddb55
+Author: Michael R. Crusoe <michael.crusoe@gmail.com>
+Date:   Sat May 27 20:55:16 2023 +0200
+
+    pass through QEMU_LD_PREFIX by default
+    
+    For systems using qemu-user-static to run foreign binaries outside of
+    containers
+
+diff --git a/cwltool/job.py b/cwltool/job.py
+index 2faf5877..f109e48a 100644
+--- a/cwltool/job.py
++++ b/cwltool/job.py
+@@ -582,8 +582,9 @@ class CommandLineJob(JobBase):
+         env["HOME"] = self.outdir
+         env["TMPDIR"] = self.tmpdir
+         env["PATH"] = os.environ["PATH"]
+-        if "SYSTEMROOT" in os.environ:
+-            env["SYSTEMROOT"] = os.environ["SYSTEMROOT"]
++        for extra in ("SYSTEMROOT", "QEMU_LD_PREFIX"):
++            if extra in os.environ:
++                env[extra] = os.environ[extra]
+         return env
+ 
+ 
