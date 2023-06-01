@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20230527103121" %}
-{% set sha256 = "149d997734fff38c29530494fd5e1139b9b0c8ad62280e3e9da41a0c7a305d30" %}
+{% set version = "3.1.20230601100705" %}
+{% set sha256 = "9a5ce021c80e8c9276003c67caf26f163ce0fc03b3ca8b5828cfdb9a1e263fab" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -12,7 +12,7 @@ source:
     - qemu-ld-prefix_preserve.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or win]
   entry_points:
     - cwltool=cwltool.main:run
