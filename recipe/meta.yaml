@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20230601100705" %}
-{% set sha256 = "9a5ce021c80e8c9276003c67caf26f163ce0fc03b3ca8b5828cfdb9a1e263fab" %}
+{% set version = "3.1.20230624081518" %}
+{% set sha256 = "7adb9fc0bc0fd68b940c96bef6b72772f0d5f27399024cc912804c09de475847" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/c/cwltool/cwltool-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - qemu-ld-prefix_preserve.patch
 
 build:
   number: 0
@@ -55,6 +53,7 @@ requirements:
     - importlib_metadata  # [py<38]
     - coloredlogs
     - galaxy-tool-util >=22.1.2,<23
+    - galaxy-util <23
     - pydot >=1.4.1
     - argcomplete
     - cachecontrol
@@ -63,7 +62,7 @@ requirements:
 test:
   requires:
     - bagit >=1.6.4,<1.9
-    - pytest >=6.2,<7.4
+    - pytest >=6.2,<7.5
     - mock >=2.0.0
     - pytest-mock >=1.10.0
     - pytest-httpserver
