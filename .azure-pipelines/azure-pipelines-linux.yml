@@ -8,22 +8,6 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_nodejs16python3.10.____cpython:
-        CONFIG: linux_64_nodejs16python3.10.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16python3.11.____cpython:
-        CONFIG: linux_64_nodejs16python3.11.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16python3.8.____cpython:
-        CONFIG: linux_64_nodejs16python3.8.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_nodejs16python3.9.____cpython:
-        CONFIG: linux_64_nodejs16python3.9.____cpython
-        UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_nodejs18python3.10.____cpython:
         CONFIG: linux_64_nodejs18python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
@@ -40,20 +24,20 @@ jobs:
         CONFIG: linux_64_nodejs18python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_nodejs16python3.10.____cpython:
-        CONFIG: linux_aarch64_nodejs16python3.10.____cpython
+      linux_64_nodejs20python3.10.____cpython:
+        CONFIG: linux_64_nodejs20python3.10.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_nodejs16python3.11.____cpython:
-        CONFIG: linux_aarch64_nodejs16python3.11.____cpython
+      linux_64_nodejs20python3.11.____cpython:
+        CONFIG: linux_64_nodejs20python3.11.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_nodejs16python3.8.____cpython:
-        CONFIG: linux_aarch64_nodejs16python3.8.____cpython
+      linux_64_nodejs20python3.8.____cpython:
+        CONFIG: linux_64_nodejs20python3.8.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_aarch64_nodejs16python3.9.____cpython:
-        CONFIG: linux_aarch64_nodejs16python3.9.____cpython
+      linux_64_nodejs20python3.9.____cpython:
+        CONFIG: linux_64_nodejs20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_nodejs18python3.10.____cpython:
@@ -70,6 +54,22 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_aarch64_nodejs18python3.9.____cpython:
         CONFIG: linux_aarch64_nodejs18python3.9.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_nodejs20python3.10.____cpython:
+        CONFIG: linux_aarch64_nodejs20python3.10.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_nodejs20python3.11.____cpython:
+        CONFIG: linux_aarch64_nodejs20python3.11.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_nodejs20python3.8.____cpython:
+        CONFIG: linux_aarch64_nodejs20python3.8.____cpython
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_aarch64_nodejs20python3.9.____cpython:
+        CONFIG: linux_aarch64_nodejs20python3.9.____cpython
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
