@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20231016170136" %}
-{% set sha256 = "0523b6b723203980bc855f85d23d583e61407c61d89a85d1706d30fa2a13ecdf" %}
+{% set version = "3.1.20231020113452" %}
+{% set sha256 = "ebbecded9c4b4fc25382ac20fca56f7b4a81bcfcfdf803c44432674587ac3326" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -32,7 +32,7 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=8.0.4,<9
     - schema-salad >=8.4.20230426093816,<9
-    - galaxy-tool-util >=22.1.2,<24
+    - galaxy-tool-util >=22.1.2,<23
     - toml
     - argcomplete
     - cwl-utils >=0.22
@@ -54,8 +54,8 @@ requirements:
     - typing_extensions
     - importlib_resources >=1.4
     - coloredlogs
-    - galaxy-tool-util >=22.1.2,<24
-    - galaxy-util <24
+    - galaxy-tool-util >=22.1.2,<23
+    - galaxy-util <23
     - pydot >=1.4.1
     - argcomplete
     - cachecontrol
