@@ -32,7 +32,7 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=8.0.4,<9
     - schema-salad >=8.4.20230426093816,<9
-    - galaxy-tool-util >=22.1.2,<24
+    - galaxy-tool-util >=22.1.2,<23
     - toml
     - argcomplete
     - cwl-utils >=0.22
@@ -54,8 +54,8 @@ requirements:
     - typing_extensions
     - importlib_resources >=1.4
     - coloredlogs
-    - galaxy-tool-util >=22.1.2,<24
-    - galaxy-util <24
+    - galaxy-tool-util >=22.1.2,<23
+    - galaxy-util <23
     - pydot >=1.4.1
     - argcomplete
     - cachecontrol
