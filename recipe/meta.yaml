@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20231020140205" %}
-{% set sha256 = "fbeb1eba7c57187a8651611702dad41576e36f4e04e75935837d6b1917c598df" %}
+{% set version = "3.1.20231114134824" %}
+{% set sha256 = "3047bd979978e4aeff4f9e51415d1d10e520f26cc09eac38bc467834aaf152ba" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -32,19 +32,19 @@ requirements:
     - setuptools >=45
     - setuptools_scm >=8.0.4,<9
     - schema-salad >=8.4.20230426093816,<9
-    - galaxy-tool-util >=22.1.2,<23
+    - galaxy-tool-util >=22.1.2,<23.2,!=23.0.1,!=23.0.2,!=23.0.3,!=23.0.4,!=23.0.5
     - toml
-    - argcomplete
-    - cwl-utils >=0.22
+    - argcomplete >=1.12.0
+    - cwl-utils >=0.22,!=0.30
     - importlib_resources >=1.4
-    - ruamel.yaml >=0.17.6,<0.18
+    - ruamel.yaml >=0.17.6,<0.19
       # ruamel.yaml is needed for the type hints
       # the newer version: 0.15.99 has py.typed, which mypyc needs
   run:
     - python
     - setuptools
     - requests >=2.6.1
-    - ruamel.yaml >=0.17.6,<0.18
+    - ruamel.yaml >=0.17.6,<0.19
     - rdflib >=4.2.2,<7.1.0
     - shellescape >=3.4.1,<3.9
     - schema-salad >=8.4,<9
@@ -54,12 +54,12 @@ requirements:
     - typing_extensions
     - importlib_resources >=1.4
     - coloredlogs
-    - galaxy-tool-util >=22.1.2,<23
-    - galaxy-util <23
+    - galaxy-tool-util >=22.1.2,<23.2,!=23.0.1,!=23.0.2,!=23.0.3,!=23.0.4,!=23.0.5
+    - galaxy-util <23.2
     - pydot >=1.4.1
-    - argcomplete
+    - argcomplete >=1.12.0
     - cachecontrol
-    - cwl-utils >=0.22
+    - cwl-utils >=0.22,!=0.30
 
 test:
   requires:
