@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.1.20240404144621" %}
-{% set sha256 = "41e0fdcf4650acfe5df482848b302d7003a53d98cb8596411380841182b41bcc" %}
+{% set version = "3.1.20240508115724" %}
+{% set sha256 = "72e238f281ac1622fc97a2bce970b475e0e8263d1579b0ba67359ef4ffbf0e2a" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -21,6 +21,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}  # for mypyc
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
