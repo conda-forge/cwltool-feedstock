@@ -25,7 +25,7 @@ requirements:
   host:
     - python
     - pip
-    - mypy ==1.13.0 # setup.py needs this when CWLTOOL_USE_MYPYC=1
+    - mypy ==1.14.1 # setup.py needs this when CWLTOOL_USE_MYPYC=1
     - types-requests
     - types-setuptools
     - types-psutil
@@ -40,6 +40,7 @@ requirements:
     - ruamel.yaml >=0.17.6,<0.19
       # ruamel.yaml is needed for the type hints
       # the newer version: 0.15.99 has py.typed, which mypyc needs
+    - rich-argparse
   run:
     - python
     - requests >=2.6.1
@@ -59,6 +60,7 @@ requirements:
     - cachecontrol
     - cwl-utils >=0.32
     - spython >=0.3.0
+    - rich-argparse
 
 test:
   requires:
