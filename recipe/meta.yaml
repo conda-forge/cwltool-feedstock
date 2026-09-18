@@ -37,7 +37,7 @@ requirements:
     - galaxy-tool-util >=22.1.2,<25.2,!=23.0.1,!=23.0.2,!=23.0.3,!=23.0.4,!=23.0.5
     - toml
     - argcomplete >=1.12.0
-    - cwl-utils >=0.41
+    - cwl-utils >=0.41,<0.43
     - ruamel.yaml >=0.17.6,<0.20
       # ruamel.yaml is needed for the type hints
       # the newer version: 0.15.99 has py.typed, which mypyc needs
@@ -60,7 +60,7 @@ requirements:
     - pyparsing !=3.0.2
     - argcomplete >=1.12.0
     - cachecontrol
-    - cwl-utils >=0.41
+    - cwl-utils >=0.41,<0.43
     - spython >=0.3.0
     - rich-argparse
     - typing-extensions >=4.1.0
