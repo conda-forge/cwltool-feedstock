@@ -1,12 +1,12 @@
 {% set name = "cwltool" %}
-{% set version = "3.2.20260720092025" %}
-{% set sha256 = "d0671d429f2e35d8009c77c17625a418bceaa8b236ff5ca2cd0bcfc867cf4bf4" %}
+{% set version = "3.3.20260925135507" %}
+{% set sha256 = "296c3952e1753486fa51117fb599fdfacea10193e0c50b83a33cbc821f88c720" %}
 package:
   name: cwltool
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/c/cwltool/cwltool-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/c/cwltool/cwltool-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
