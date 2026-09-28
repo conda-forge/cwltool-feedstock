@@ -10,11 +10,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py2k or win]
   entry_points:
     - cwltool=cwltool.main:run
-  script: CWLTOOL_USE_MYPYC=1 MYPYPATH=mypy-stubs {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  # script: CWLTOOL_USE_MYPYC=1 MYPYPATH=mypy-stubs {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
