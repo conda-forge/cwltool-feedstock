@@ -1,6 +1,6 @@
 {% set name = "cwltool" %}
-{% set version = "3.3.20260925135507" %}
-{% set sha256 = "296c3952e1753486fa51117fb599fdfacea10193e0c50b83a33cbc821f88c720" %}
+{% set version = "3.3.20261106131234" %}
+{% set sha256 = "a69be4f0f90a16e9ebb2674844610528a76811c4725e8c457138c98e9c6edde2" %}
 package:
   name: cwltool
   version: {{ version }}
@@ -10,7 +10,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py2k or win]
   entry_points:
     - cwltool=cwltool.main:run
